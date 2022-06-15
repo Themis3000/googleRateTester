@@ -1,6 +1,7 @@
 {
   "delay_tests": [0, 1, 2, 4, 5, 15, 30],
   "samples_per_test": 2,
+  "max_concurrency": 10,
   "proxies": [
     "proxy1",
     "proxy2",
