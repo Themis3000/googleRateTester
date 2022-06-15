@@ -55,4 +55,6 @@ for test_delay in config["delay_tests"]:
         executor.shutdown(wait=True, cancel_futures=True)
         got_non_ok = False
 
-print(results)
+
+with open("results.json", "w") as f:
+    json.dump(results, f)

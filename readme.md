@@ -10,7 +10,7 @@ My hypnosis is that no rate limit will cause there to be fewer successful reques
 
 The file main.py utilizes `googlesearch-python` to make a series of automated requests to google based on the configuration values set in `config.json`.
 
-In this test the parameters set where `"delay_tests": [0, 1, 2, 4, 5, 15, 30]` and `"samples_per_test": 14`. This means the test is repeated 14 times for a delay of 0, 1, 2, 4, 5, 15, and 30 seconds.
+In this test the parameters set where `"delay_tests": [0, 1, 2, 4, 5, 15, 30]` and `"samples_per_test": 14`. This means the test is repeated 14 times for a delay of 0.15, 1, 2, 4, 5, 15, and 30 seconds.
 
 In the config file, the `Proxies` value was filled in with proxies obtained from https://proxy.webshare.io. All proxies where located within the usa and where purchased under the cheapest available plan. All ip addresses where datacenter ip's.
 
