@@ -25,7 +25,7 @@ def make_request(proxy, label, sub_label):
     start = time.time()
     term = random_term()
     try:
-        print(f"looking up {term} and recording under {label} with proxy {proxy}")
+        print(f"looking up {term}")
         if random.random() < .4:
             raise Exception("Request failed")
         time.sleep(random.random()*4)
