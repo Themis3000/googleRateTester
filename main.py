@@ -12,11 +12,6 @@ results = {}
 got_non_ok = False
 
 
-def proxies_gen():
-    for proxy in config["proxies"]:
-        yield {"https": proxy}
-
-
 def random_term():
     return random.choice(config["search_items"])
 
@@ -26,9 +21,8 @@ def make_request(proxy, label, sub_label):
     term = random_term()
     try:
         print(f"looking up {term}")
-        if random.random() < .4:
-            raise Exception("Request failed")
-        time.sleep(random.random()*4)
+        search_results = search(term, proxy=proxy)
+        next(search_results)
     except:
         global got_non_ok
         got_non_ok = True
@@ -39,7 +33,7 @@ def make_request(proxy, label, sub_label):
     print(f"done - looked up {term} in {time_taken} secs")
 
 
-proxies = proxies_gen()
+proxies = iter(config["proxies"])
 
 for test_delay in config["delay_tests"]:
     print(f"---Starting test for {test_delay} sec delay---")
