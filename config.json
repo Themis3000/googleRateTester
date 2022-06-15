@@ -1,4 +1,22 @@
 {
+  "delay_tests": [0, 1, 2, 4, 5, 15, 30],
+  "samples_per_test": 2,
+  "proxies": [
+    "proxy1",
+    "proxy2",
+    "proxy3",
+    "proxy4",
+    "proxy5",
+    "proxy6",
+    "proxy7",
+    "proxy8",
+    "proxy9",
+    "proxy10",
+    "proxy11",
+    "proxy12",
+    "proxy13",
+    "proxy14"
+  ],
   "search_items": [
     "How to eat a hamburger",
     "How to clean a toilet",
